@@ -1,0 +1,16 @@
+{
+  "name": "trener-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "alexey3000.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "cattyn",
+  "license": "MIT",
+  "dependencies": {
+    "markov-generator": "^1.2.3"
+  }
+}
