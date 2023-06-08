@@ -18,5 +18,3 @@ export class Alexey3000 {
     return this.markov.makeChain();
   }
 }
-
-console.log(new Alexey3000().generate());
