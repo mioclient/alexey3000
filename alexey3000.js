@@ -1,14 +1,20 @@
 import MarkovGen from 'markov-generator';
 import fs from 'fs'
 
-const file = fs.readFileSync("dictionary.txt");
-const arr = file.toString().split('\n');
+export class Alexey3000 {
+  markov;
 
-let markov = new MarkovGen({
-    input: arr,
-    minLength: 15
-  });
-   
+  constructor(props) {
+    const file = fs.readFileSync(props.dictionary || "dictionary.txt");
+    const arr = file.toString().split('\n');
+    
+    this.markov = new MarkovGen({
+        input: arr,
+        minLength: props.length || 15
+    });
+  }
 
-let sentence = markov.makeChain();
-console.log(sentence);
+  generate() {
+    return this.markov.makeChain();
+  }
+}
