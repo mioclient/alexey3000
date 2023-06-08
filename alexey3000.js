@@ -4,7 +4,7 @@ import fs from 'fs'
 export class Alexey3000 {
   markov;
 
-  constructor(props) {
+  constructor(props = {}) {
     const file = fs.readFileSync(props.dictionary || "./dictionary.txt");
     const arr = file.toString().split('\n');
     
@@ -18,3 +18,5 @@ export class Alexey3000 {
     return this.markov.makeChain();
   }
 }
+
+console.log(new Alexey3000().generate());
